@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.5)  1 MAY 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.5)  2 MAY 2018 13:57
 entering extended mode
 **./Blatt01_BloschHeiland.tex
 (Blatt01_BloschHeiland.tex
@@ -1396,90 +1396,112 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 11.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<aufgabe_1_2_a.png, id=39, 1858.945pt x 730.73pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 36.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 36.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 36.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 36.
+ [2{C:/Users/Yannis Blosch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<aufgabe_1_2_a.png, id=62, 1858.945pt x 730.73pt>
 File: aufgabe_1_2_a.png Graphic file (type png)
 <use aufgabe_1_2_a.png>
 Package pdftex.def Info: aufgabe_1_2_a.png  used on input line 42. on input lin
 e 42.
 Package pdftex.def Info: Requested size: 338.58632pt x 133.08672pt on input lin
 e 42.
-<aufgabe_1_2_b.png, id=41, 638.385pt x 166.6225pt>
+<aufgabe_1_2_b.png, id=64, 638.385pt x 166.6225pt>
 File: aufgabe_1_2_b.png Graphic file (type png)
 <use aufgabe_1_2_b.png>
 Package pdftex.def Info: aufgabe_1_2_b.png  used on input line 49. on input lin
 e 49.
 Package pdftex.def Info: Requested size: 338.58632pt x 88.37306pt on input line
  49.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<aufgabe_1_2_c.png, id=42, 2396.955pt x 726.715pt>
+<aufgabe_1_2_c.png, id=65, 2396.955pt x 726.715pt>
 File: aufgabe_1_2_c.png Graphic file (type png)
 <use aufgabe_1_2_c.png>
 Package pdftex.def Info: aufgabe_1_2_c.png  used on input line 56. on input lin
 e 56.
 Package pdftex.def Info: Requested size: 338.58632pt x 102.64868pt on input lin
 e 56.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
-[2{C:/Users/Yannis Blosch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
-/aufgabe_1_2_a.png>]
-<aufgabe_1_2_e.png, id=72, 2999.205pt x 690.58pt>
+(babel)             in language  on input line 60.
+ [3 <./aufgabe_1_2_a.png> <./aufgabe_1_2_b.png> <./aufgabe_1_2_c.png>]
+<aufgabe_1_2_d.png, id=78, 462.72874pt x 241.90375pt>
+File: aufgabe_1_2_d.png Graphic file (type png)
+<use aufgabe_1_2_d.png>
+Package pdftex.def Info: aufgabe_1_2_d.png  used on input line 65. on input lin
+e 65.
+Package pdftex.def Info: Requested size: 338.58632pt x 177.00536pt on input lin
+e 65.
+<aufgabe_1_2_e.png, id=79, 2999.205pt x 690.58pt>
 File: aufgabe_1_2_e.png Graphic file (type png)
 <use aufgabe_1_2_e.png>
-Package pdftex.def Info: aufgabe_1_2_e.png  used on input line 71. on input lin
-e 71.
+Package pdftex.def Info: aufgabe_1_2_e.png  used on input line 72. on input lin
+e 72.
 Package pdftex.def Info: Requested size: 338.58632pt x 77.9556pt on input line 
-71.
+72.
+<aufgabe_1_2_f.png, id=80, 543.02875pt x 201.75375pt>
+File: aufgabe_1_2_f.png Graphic file (type png)
+<use aufgabe_1_2_f.png>
+Package pdftex.def Info: aufgabe_1_2_f.png  used on input line 79. on input lin
+e 79.
+Package pdftex.def Info: Requested size: 338.58632pt x 125.80023pt on input lin
+e 79.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 84.
- [3 <./aufgabe_1_2_b.png> <./aufgabe_1_2_c.png> <./aufgabe_1_2_e.png>]
-<aufgabe_1_2_g.png, id=83, 2541.495pt x 501.875pt>
+(babel)             in language  on input line 85.
+ [4 <./aufgabe_1_2_d.png> <./aufgabe_1_2_e.png> <./aufgabe_1_2_f.png>]
+<aufgabe_1_2_g.png, id=91, 2541.495pt x 501.875pt>
 File: aufgabe_1_2_g.png Graphic file (type png)
 <use aufgabe_1_2_g.png>
-Package pdftex.def Info: aufgabe_1_2_g.png  used on input line 89. on input lin
-e 89.
+Package pdftex.def Info: aufgabe_1_2_g.png  used on input line 90. on input lin
+e 90.
 Package pdftex.def Info: Requested size: 338.58632pt x 66.86186pt on input line
- 89.
+ 90.
+<aufgabe_1_2_h.png, id=92, 583.17876pt x 191.71625pt>
+File: aufgabe_1_2_h.png Graphic file (type png)
+<use aufgabe_1_2_h.png>
+Package pdftex.def Info: aufgabe_1_2_h.png  used on input line 97. on input lin
+e 97.
+Package pdftex.def Info: Requested size: 338.58632pt x 111.30959pt on input lin
+e 97.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 99.
- [4 <./aufgabe_1_2_g.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
+(babel)             in language  on input line 100.
+ [5 <./aufgabe_1_2_g.png> <./aufgabe_1_2_h.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
  (Blatt01_BloschHeiland.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `Blatt01_BloschHeiland.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 23134 strings out of 493312
- 418872 string characters out of 3138873
- 549663 words of memory out of 3000000
- 26200 multiletter control sequences out of 15000+200000
+ 23151 strings out of 493312
+ 419205 string characters out of 3138873
+ 547663 words of memory out of 3000000
+ 26213 multiletter control sequences out of 15000+200000
  10780 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,66p,449b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1491,9 +1513,9 @@ h\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\
 Users\Yannis Blosch\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ecsl1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Blatt01_BloschHeiland.pdf (4 pages, 379594 bytes).
+Output written on Blatt01_BloschHeiland.pdf (5 pages, 408679 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

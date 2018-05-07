@@ -27,6 +27,8 @@
 			
 			Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
 			
+			Wagen ()\\[1.3em]
+			
 			Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
 			
 			Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, Adresse, KundenNr)\\[1,3em]
@@ -58,7 +60,16 @@
 	\section*{Aufgabe 2.2}
 	
 		\paragraph*{a)}
-			$\pi_{Name, Sitz}(\sigma_{TeilNr=25}(Teil)(Lieferant))$
-	
+			$\pi_{Name, Sitz}(\sigma_{TeilNr=25}(Lieferung))(Lieferant)$
+			
+		\paragraph*{b)}
+			$\pi_{Name}(\sigma_{(TeilNr=15) - (TeilNr != 15)}(Lagerbestand))(Lager)$
+			
+		
+		\paragraph*{c)}
+			$\pi_{Name}(\sigma_{(Lieferdatum = 01.01.2018) \cap (Menge >= 500)}(Lieferung))(Lieferant)$
+		
+		
+		
 		
 \end{document}

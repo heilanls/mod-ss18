@@ -8,6 +8,12 @@
 	\input{formatAndHeader.tex}
 	
 	\section*{Aufgabe 2.1}
+		
+		%a)
+		%Geben Sie zunächst die Relationen mit ihren Attributen in folgender Notation an: 
+
+		%Relation ( Attribut1, Attribut2, …, Attributn) 
+		%Verwenden Sie Namen von Relationen und Attributen, die möglichst nahe an den Vorgaben im ER-Diagramm sind. Erzeugen Sie keine überflüssigen Relationen oder Attribute! Markieren Sie die Primärschlüssel der Relationen durch Unterstreichung. Verwenden Sie zur Umsetzung der is-aBeziehung das Hausklassenmodell. 
 		\paragraph*{a.}
 			Bahnhof (\underline{Ort}, \underline{Haltestelle},Kategorie)\\[1.3em]
 			
@@ -16,7 +22,31 @@
 			Linie (\underline{Bezeichnung}, Betreiber)\\[1.3em]
 			
 			Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
+			
+			Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
+			
+			Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, Adresse, KundenNr)\\[1,3em]
+			
+			Mitarbeiter (\underline{Name}, \underline{Geburtsdatum},  Adresse, Gehalt)\\[1,3em]
 		
+		%b)
+		%Geben Sie alle Fremdschlüsselattribute an und benennen Sie die Relationen und Attribute, auf die diese jeweils verweisen in der folgenden Notation: 
+		
+		%Relation1(Attribut1) -> Relation2(Attribut2) 	
+		\paragraph*{b.}	
+			
+			
+			
+		%c)
+		% Geben Sie für die Umsetzung der is-a-Beziehung eine Lösung im Partitionierungsmodell an. Geben Sie alle Relationen an, die im Zusammenhang mit der is-a-Beziehung erforderlich sind. Erläutern Sie, wie sich die zugehörigen Relationen und deren Attribute im Vergleich zum Hausklassenmodell ändern? 
+		\paragraph*{c.}
+			Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
+			
+			Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, KundenNr) \\[1,3em]
+			
+			Mitarbeiter (\underline{Name}, \underline{Geburtsdatum}, Gehalt) \\[1,3em]
+		
+			Nur neu hinzukommende Attribute und Primärschlüssel werden mit in die Relation aufgenommen.
 	
 	\newpage	
 	\section*{Aufgabe 2.2}

@@ -8,6 +8,10 @@
 	\input{formatAndHeader.tex}
 	
 	\section*{Aufgabe 2.1}
+	%Quelle(https://andydunkel.net/assets/wp-custom/docs/datenbanken.pdf)
+	
+	
+	
 		
 		%a)
 		%Geben Sie zunächst die Relationen mit ihren Attributen in folgender Notation an: 
@@ -35,7 +39,9 @@
 		%Relation1(Attribut1) -> Relation2(Attribut2) 	
 		\paragraph*{b.}	
 			
+			Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
 			
+			Wagen (\underline{WagenNr}, \underline{ZugNr} REFERENCES Zug, Plätze)\\[1.3em]
 			
 		%c)
 		% Geben Sie für die Umsetzung der is-a-Beziehung eine Lösung im Partitionierungsmodell an. Geben Sie alle Relationen an, die im Zusammenhang mit der is-a-Beziehung erforderlich sind. Erläutern Sie, wie sich die zugehörigen Relationen und deren Attribute im Vergleich zum Hausklassenmodell ändern? 

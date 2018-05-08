@@ -1,75 +1,73 @@
 \documentclass[12pt]{article}
 
 \input{usepackage.tex}
-
-\begin{document}
-	\includepdf[pages=-]{deckblatt.pdf}
-	
-	\input{formatAndHeader.tex}
-	
-	\section*{Aufgabe 2.1}
-	%Quelle(https://andydunkel.net/assets/wp-custom/docs/datenbanken.pdf)
-	
-	
-	
-		
-		%a)
-		%Geben Sie zunächst die Relationen mit ihren Attributen in folgender Notation an: 
-
-		%Relation ( Attribut1, Attribut2, …, Attributn) 
-		%Verwenden Sie Namen von Relationen und Attributen, die möglichst nahe an den Vorgaben im ER-Diagramm sind. Erzeugen Sie keine überflüssigen Relationen oder Attribute! Markieren Sie die Primärschlüssel der Relationen durch Unterstreichung. Verwenden Sie zur Umsetzung der is-aBeziehung das Hausklassenmodell. 
-		\paragraph*{a.}
-			Bahnhof (\underline{Ort}, \underline{Haltestelle},Kategorie)\\[1.3em]
-			
-			Fahrkarte (\underline{FahrkartenNr}, Reisedatum, Startzeit, Pl"atze)\\[1.3em]
-			
-			Linie (\underline{Bezeichnung}, Betreiber)\\[1.3em]
-			
-			Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
-			
-			Wagen ()\\[1.3em]
-			
-			Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
-			
-			Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, Adresse, KundenNr)\\[1,3em]
-			
-			Mitarbeiter (\underline{Name}, \underline{Geburtsdatum},  Adresse, Gehalt)\\[1,3em]
-		
-		%b)
-		%Geben Sie alle Fremdschlüsselattribute an und benennen Sie die Relationen und Attribute, auf die diese jeweils verweisen in der folgenden Notation: 
-		
-		%Relation1(Attribut1) -> Relation2(Attribut2) 	
-		\paragraph*{b.}	
-			
-			Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
-			
-			Wagen (\underline{WagenNr}, \underline{ZugNr} REFERENCES Zug, Plätze)\\[1.3em]
-			
-		%c)
-		% Geben Sie für die Umsetzung der is-a-Beziehung eine Lösung im Partitionierungsmodell an. Geben Sie alle Relationen an, die im Zusammenhang mit der is-a-Beziehung erforderlich sind. Erläutern Sie, wie sich die zugehörigen Relationen und deren Attribute im Vergleich zum Hausklassenmodell ändern? 
-		\paragraph*{c.}
-			Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
-			
-			Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, KundenNr) \\[1,3em]
-			
-			Mitarbeiter (\underline{Name}, \underline{Geburtsdatum}, Gehalt) \\[1,3em]
-		
-			Nur neu hinzukommende Attribute und Primärschlüssel werden mit in die Relation aufgenommen.
-	
-	\newpage	
-	\section*{Aufgabe 2.2}
-	
-		\paragraph*{a)}
-			$\pi_{Name, Sitz}(\sigma_{TeilNr=25}(Lieferung))(Lieferant)$
-			
-		\paragraph*{b)}
-			$\pi_{Name}(\sigma_{(TeilNr=15) - (TeilNr != 15)}(Lagerbestand))(Lager)$
-			
-		
-		\paragraph*{c)}
-			$\pi_{Name}(\sigma_{(Lieferdatum = 01.01.2018) \cap (Menge >= 500)}(Lieferung))(Lieferant)$
-		
-		
-		
-		
-\end{document}
+ \begin{document}
+ 	\includepdf[pages=-]{deckblatt.pdf}
+ 	
+ 	\input{formatAndHeader.tex}
+ 	
+ 	\section*{Aufgabe 2.1}
+ 	%Quelle(https://andydunkel.net/assets/wp-custom/docs/datenbanken.pdf)
+ 	
+ 	
+ 	%a)
+ 	%Geben Sie zunächst die Relationen mit ihren Attributen in folgender Notation an: 
+ 	
+ 	%Relation ( Attribut1, Attribut2, …, Attributn) 
+ 	%Verwenden Sie Namen von Relationen und Attributen, die möglichst nahe an den Vorgaben im ER-Diagramm sind. Erzeugen Sie keine überflüssigen Relationen oder Attribute! Markieren Sie die Primärschlüssel der Relationen durch Unterstreichung. Verwenden Sie zur Umsetzung der is-a-Beziehung das Hausklassenmodell. 
+ 	\paragraph*{a.}
+ 	Bahnhof (\underline{Ort}, \underline{Haltestelle},Kategorie)\\[1.3em]
+ 	
+ 	Fahrkarte (\underline{FahrkartenNr}, Reisedatum, Startzeit, Pl"atze)\\[1.3em]
+ 	
+ 	Linie (\underline{Bezeichnung}, Betreiber)\\[1.3em]
+ 	
+ 	Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
+ 	
+ 	Wagen ()\\[1.3em]
+ 	
+ 	Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
+ 	
+ 	Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, Adresse, KundenNr)\\[1,3em]
+ 	
+ 	Mitarbeiter (\underline{Name}, \underline{Geburtsdatum},  Adresse, Gehalt)\\[1,3em]
+ 	
+ 	%b)
+ 	%Geben Sie alle Fremdschlüsselattribute an und benennen Sie die Relationen und Attribute, auf die diese jeweils verweisen in der folgenden Notation: 
+ 	
+ 	%Relation1(Attribut1) -> Relation2(Attribut2) 	
+ 	\paragraph*{b.}	
+ 	
+ 	Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
+ 	
+ 	Wagen (\underline{WagenNr}, \underline{ZugNr} REFERENCES Zug, Plätze)\\[1.3em]
+ 	
+ 	%c)
+ 	% Geben Sie für die Umsetzung der is-a-Beziehung eine Lösung im Partitionierungsmodell an. Geben Sie alle Relationen an, die im Zusammenhang mit der is-a-Beziehung erforderlich sind. Erläutern Sie, wie sich die zugehörigen Relationen und deren Attribute im Vergleich zum Hausklassenmodell ändern? 
+ 	\paragraph*{c.}
+ 	Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
+ 	
+ 	Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, KundenNr) \\[1,3em]
+ 	
+ 	Mitarbeiter (\underline{Name}, \underline{Geburtsdatum}, Gehalt) \\[1,3em]
+ 	Nur neu hinzukommende Attribute und Primärschlüssel werden mit in die Relation aufgenommen.
+ 		
+ 	\section*{Aufgabe 2.2}
+ 	
+ 	\paragraph*{a)}
+ 	$\pi_{Name, Sitz}(\sigma_{TeilNr=25}(Lieferung))(Lieferant)$
+ 	
+ 	\paragraph*{b)}
+ 	$\pi_{Name}(\sigma_{(TeilNr=15) - (TeilNr != 15)}(Lagerbestand))(Lager)$
+ 	
+ 	
+ 	\paragraph*{c)}
+ 	$\pi_{Name}(\sigma_{(Lieferdatum = 01.01.2018) \wedge (Menge > 500)}(Lieferung))(Lieferant)$
+ 	
+ 	
+ 	\paragraph*{d)}
+ 	$\pi_{Bezeichnung}(\large(\sigma_{Bezeichnung=Schraube}(Teil) \overset{TeilNr = Bestandteil}{\bowtie} St"uckliste\large) \overset{Komponente = TeilNr}{\bowtie} Teil)$
+ 	
+ 	\paragraph*{e)}
+ 	$\pi_{Name}$
+ \end{document}

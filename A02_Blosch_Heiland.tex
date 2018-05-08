@@ -16,22 +16,38 @@
  	%Relation ( Attribut1, Attribut2, …, Attributn) 
  	%Verwenden Sie Namen von Relationen und Attributen, die möglichst nahe an den Vorgaben im ER-Diagramm sind. Erzeugen Sie keine überflüssigen Relationen oder Attribute! Markieren Sie die Primärschlüssel der Relationen durch Unterstreichung. Verwenden Sie zur Umsetzung der is-a-Beziehung das Hausklassenmodell. 
  	\paragraph*{a.}
- 	Bahnhof (\underline{Ort}, \underline{Haltestelle},Kategorie)\\[1.3em]
- 	
- 	Fahrkarte (\underline{FahrkartenNr}, Reisedatum, Startzeit, Pl"atze)\\[1.3em]
- 	
- 	Linie (\underline{Bezeichnung}, Betreiber)\\[1.3em]
- 	
- 	Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
- 	
- 	Wagen ()\\[1.3em]
- 	
- 	Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
- 	
- 	Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, Adresse, KundenNr)\\[1,3em]
- 	
- 	Mitarbeiter (\underline{Name}, \underline{Geburtsdatum},  Adresse, Gehalt)\\[1,3em]
- 	
+	 	Bahnhof (\underline{Ort}, \underline{Haltestelle},Kategorie)\\[1.3em]
+	 	
+	 	Fahrkarte (\underline{FahrkartenNr}, Reisedatum, Startzeit, Pl"atze)\\[1.3em]
+	 	
+	 	Linie (\underline{Bezeichnung}, Betreiber)\\[1.3em]
+	 	
+	 	Zug (\underline{ZugNr}, Eigentümer)\\[1.3em]
+	 	
+	 	Wagen (\underline{WagenNr, ZugNr})\\[1.3em]
+	 	
+	 	Person (\underline{Name}, \underline{Geburtsdatum}, Adresse) \\[1,3em]
+	 	
+	 	Bahnkundin (\underline{Name}, \underline{Geburtsdatum}, Adresse, KundenNr)\\[1,3em]
+	 	
+	 	Mitarbeiter (\underline{Name}, \underline{Geburtsdatum},  Adresse, Gehalt)\\[1,3em]
+	 	
+	 	f"ahrt an (täglich, \underline{Ort, Haltestelle, Bezeichnung})\\[1,3em]
+	 	
+	 	eingesetzt (\underline{ZugNr}, Linie -> Bezeichnung)\\[1,3em]
+	 	
+	 	geh"ort zu ()\\[1,3em]
+	 	
+	 	von (\underline{Fahrkarte},Ort, Haltestelle)\\[1,3em]
+	 	
+	 	nach (\underline{Fahrkarte},Ort, Haltestelle)\\[1,3em]
+	 	
+	 	f"ur (\underline{Fahrkarte}, Linie -> Bezeichnung)\\[1,3em]
+	 	
+	 	Ausstattung(\underline{WagenNr, ZugNr})\\[2 em]
+	 	
+	 	\textbf{Foreign Keys:}\\[1,3em]
+	 	
  	%b)
  	%Geben Sie alle Fremdschlüsselattribute an und benennen Sie die Relationen und Attribute, auf die diese jeweils verweisen in der folgenden Notation: 
  	

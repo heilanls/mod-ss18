@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.14)  10 MAY 2018 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.14)  10 MAY 2018 18:13
 entering extended mode
 **./A02_Blosch_Heiland.tex
 (A02_Blosch_Heiland.tex
@@ -1321,17 +1321,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
@@ -1380,29 +1370,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 57.
 [2{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 56--61
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-
-Overfull \hbox (24.90071pt too wide) in paragraph at lines 64--65
+Overfull \hbox (28.16379pt too wide) in paragraph at lines 64--65
 []\T1/cmr/m/n/12 Wagen(ZugNr) $[][]\OMS/cmsy/m/n/12 !$ \T1/cmr/m/n/12 Zug(ZugNr
 ); Mit-ar-bei-ter(Name, Geb.datum) $[][]\OMS/cmsy/m/n/12 !$ \T1/cmr/m/n/12 Per-
-son(Name, Geb.datum) 
+son(Name, Geb.datum); 
  []
 
 
@@ -1416,57 +1406,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Overfull \hbox (36.07292pt too wide) in paragraph at lines 68--69
+[]\T1/cmr/m/n/12 fährt an(Ort, Hal-te-stel-le) $[][]\OMS/cmsy/m/n/12 !$ \T1/cmr
+/m/n/12 Bahn-hof(Ort, Hal-te-stel-le); fährt an(Bezeichng) $[][]\OMS/cmsy/m/n/1
+2 !$ \T1/cmr/m/n/12 Li-nie(Bezeichng); 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Overfull \hbox (2.79155pt too wide) in paragraph at lines 74--75
+[]\T1/cmr/m/n/12 von(Fahrkarte) $[][]\OMS/cmsy/m/n/12 !$ \T1/cmr/m/n/12 Fahr-ka
+r-te(FahrkartenNr); von(Ort,Haltest.) $[][]\OMS/cmsy/m/n/12 !$ \T1/cmr/m/n/12 B
+ahn-hof(Ort, Hal-test.); 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 105.
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 105.
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 101.
 [3]
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 119.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 119.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 109.
- [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
+(babel)             in language  on input line 123.
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (A02_Blosch_Heiland.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 109.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `A02_Blosch_Heiland.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 109.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  )
 (\end occurred inside a group at level 1)
 
@@ -1490,7 +1529,7 @@ msfonts/cm/cmmi8.pfb><C:/apps/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
 fb><C:/apps/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/apps/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/apps/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb>
-Output written on A02_Blosch_Heiland.pdf (4 pages, 186337 bytes).
+Output written on A02_Blosch_Heiland.pdf (4 pages, 186592 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  15 named destinations out of 1000 (max. 500000)

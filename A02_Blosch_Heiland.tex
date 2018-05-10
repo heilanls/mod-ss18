@@ -114,5 +114,5 @@
  	$\pi_{Bezeichnung}(\large(\sigma_{Bezeichnung=Schraube}(Teil) \overset{TeilNr = Bestandteil}{\bowtie} St"uckliste\large) \overset{Komponente = TeilNr}{\bowtie} Teil)$
  	
  	\paragraph*{e)}
- 	$\pi_{Name}( \sigma_{Sitz = Stuttgart}((Lagerbestand \overset{Lager = Ort}{\bowtie} Lager) \overset{TeilNr = TeilNr}{\bowtie} Lieferung)\\ \overset{LieferantenNr = LieferantenNr}{\bowtie} \rho_{LNummer,LName,Sitz}(Lieferant))$
+ 	$\pi_{Name}( \sigma_{Sitz = Stuttgart \wedge Menge > 0}((Lagerbestand \overset{Lager = Ort}{\bowtie} Lager) \overset{TeilNr = TeilNr}{\bowtie} Lieferung)\\ \overset{LieferantenNr = LieferantenNr}{\bowtie} \rho_{LNummer,LName,Sitz}(Lieferant))$
  \end{document}

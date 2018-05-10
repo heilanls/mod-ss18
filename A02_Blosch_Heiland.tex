@@ -100,19 +100,19 @@
  	\section*{Aufgabe 2.2}
  	
  	\paragraph*{a)}
- 	$\pi_{Name, Sitz}(\sigma_{TeilNr=25}(Lieferung))(Lieferant)$
+ 	$\pi_{Name, Sitz}(\sigma_{TeilNr=25}(Lieferung \overset{LieferantenNr = LieferantenNr}{\bowtie} Lieferant))$
  	
  	\paragraph*{b)}
- 	$\pi_{Name}(\sigma_{(TeilNr=15) - (TeilNr != 15)}(Lagerbestand))(Lager)$
+ 	$\pi_{Name}(\sigma_{(TeilNr=15) - (TeilNr != 15)}(Lagerbestand \overset{Lager = Ort}{\bowtie} Lager))$
  	
  	
  	\paragraph*{c)}
- 	$\pi_{Name}(\sigma_{(Lieferdatum = 01.01.2018) \wedge (Menge > 500)}(Lieferung))(Lieferant)$
+ 	$\pi_{Name}(\sigma_{(Lieferdatum = 01.01.2018) \wedge (Menge > 500)}Lieferung \overset{LieferantenNr = LieferantenNr}{\bowtie} Lieferant)$
  	
  	
  	\paragraph*{d)}
  	$\pi_{Bezeichnung}(\large(\sigma_{Bezeichnung=Schraube}(Teil) \overset{TeilNr = Bestandteil}{\bowtie} St"uckliste\large) \overset{Komponente = TeilNr}{\bowtie} Teil)$
  	
  	\paragraph*{e)}
- 	$\pi_{Name}$
+ 	$\pi_{Name}( \sigma_{Sitz = Stuttgart}((Lagerbestand \overset{Lager = Ort}{\bowtie} Lager) \overset{TeilNr = TeilNr}{\bowtie} Lieferung)\\ \overset{LieferantenNr = LieferantenNr}{\bowtie} \rho_{LNummer,LName,Sitz}(Lieferant))$
  \end{document}

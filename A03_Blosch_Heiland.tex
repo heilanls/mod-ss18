@@ -2,6 +2,9 @@
 
 \input{usepackage.tex}
 
+% changing the typeface to sth that looks better with SQL queries
+\usepackage{lmodern}
+
 \begin{document}
 	%%% Vorgegebenes Deckblatt %%%
 	\includepdf{deckblatt.pdf}
@@ -12,5 +15,27 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%% actual content %%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-		Penis
+	\section*{Aufgabe 3.1}
+	% always using .\\ to let the query begin on a new line
+		\paragraph*{a}.\\
+			\textbf{SELECT} *\\
+			\textbf{FROM} abteilung\\
+			\textbf{WHERE} ORT $=$ 'Dresden'
+			\textbf{ORDER BY} ABTEILUNGSNR \textbf{DESC}
+			
+		\paragraph*{b}.\\
+			\textbf{SELECT DISTINCT} angestellter.PERSONALNR,angestellter.WOHNORT,projekt.PROJEKTORT,abteilung.ORT\\
+			\textbf{FROM} angestellter,projekt,projektmitarbeit,abteilung\\
+			\textbf{WHERE} (angestellter.PERSONALNR = projektmitarbeit.PERSONALNR) \textbf{AND} (projekt.PROJEKTORT = angestellter.WOHNORT)\\ \textbf{AND} (angestellter.ABTEILUNGSNR = abteilung.ABTEILUNGSNR)
+			
+		\paragraph*{c}.\\
+			\textbf{SELECT} ORT, \textbf{COUNT(*) as} Anzahl\\
+			\textbf{FROM} abteilung\\
+			\textbf{GROUP BY} ORT\\
+			\textbf{HAVING COUNT(*)} > 1
+			
+		\paragraph*{d}.\\
+			
+			
+			
 \end{document}

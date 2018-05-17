@@ -43,11 +43,54 @@
 			\textbf{FROM} abteilung, angestellter\\
 			\textbf{WHERE} abteilung.ABTEILUNGSNR $ = $ angestellter.ABTEILUNGSNR\\
 			\textbf{GROUP BY} abteilung.ABTEILUNGSNR\\
-			\textbf{HAVING} count(angestellter.ABTEILUNGSNR) > 10
+			\textbf{HAVING} COUNT(angestellter.ABTEILUNGSNR) > 10
 			
 	
 	\section*{Aufgabe 3.2}
+		\paragraph*{a.}
 		
+		\paragraph*{b.}.\\
+			% ich glaub das ist richtig:
+			% \textbf{DELETE}\\
+			% \textbf{FROM} abteilung
+			% \textbf{WHERE} ORT = Köln
+			
+		\paragraph*{c.}
+		
+		
+		\paragraph*{d.}.\\
+			\textbf{CREATE VIEW}  projects\_munich \textbf{AS}\\
+			\textbf{SELECT} projekt.PROJEKTNR,projekt.PROJEKTNAME,projekt.PROJEKTORT\\
+			\textbf{FROM} angestellter, projekt, projektmitarbeit\\
+			\textbf{WHERE} angestellter.PERSONALNR = projektmitarbeit.PERSONALNR \textbf{AND} projektmitarbeit.PROJEKTNR = projekt.PROJEKTNR \textbf{AND} projekt.PROJEKTORT = 'Muenchen'\\
+			\textbf{GROUP BY} projekt.PROJEKTORT, projekt.PROJEKTNAME,projekt.PROJEKTNR\\
+			\textbf{HAVING} COUNT(*) >= 5
+			
+		\paragraph*{e.}.\\
+			\textbf{DELETE FROM} projekt
+		
+		\pagebreak
+			
+		\paragraph*{f.}.\\
+			\textbf{CREATE TABLE} angestellter(\\
+			
+				PERSONALNR integer \textbf{NOT NULL PRIMARY KEY},\\
+				
+				NAME varchar(25),\\
+				
+				VORNAME varchar(25),\\
+				
+				BERUF varchar(25),\\
+				
+				GEHALT decimal,\\
+				
+				ABTEILUNGSNR integer \textbf{FOREIGN KEY REFERENCES} abteilung(ABTEILUNGSNR) \textbf{NOTNULL},\\
+				
+				MANAGER integer \textbf{FOREIGN KEY REFERENCES} angestellter(PERSONALNR),\\
+				
+				GEBURTSTAG date,\\
+				
+				WOHNORT varchar(25));
 			
 			
 \end{document}

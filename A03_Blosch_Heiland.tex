@@ -50,11 +50,60 @@
 			
 		
 		% TODO YBL: e),f),g),h)
+		\paragraph*{e}.\\
 		
-		
-		% TODO TOGETHER: i) & j)
+		\paragraph*{f}.\\
+			\textbf{SELECT COUNT} (onlyindresden) \textbf{AS} MitarbeiterDieNurAnProjektenInDresdenArbeiten\\ \textbf{FROM} (\\
+			\textbf{SELECT} indresden \textbf{AS} onlyindresden\\ \textbf{FROM} (\\
+			\textbf{SELECT} PersonalNr \textbf{AS} indresden\\ \textbf{FROM} Projektmitarbeit, (\\
+			\textbf{SELECT} ProjektNr \textbf{AS} Nr \textbf{FROM} Projekt \\
+			\textbf{WHERE} Projektort \textbf{IN} 'Dresden'
+			)\\
+			\textbf{WHERE} ProjektNr \textbf{IN} Nr \textbf{ORDER BY} PersonalNr
+			)\\
+			\textbf{WHERE} indresden \textbf{NOT IN} (\\
+			\textbf{SELECT} PersonalNr \textbf{AS} nichtindresden\\ \textbf{FROM} Projektmitarbeit, (\\
+			\textbf{SELECT} ProjektNr \textbf{AS} NoNr\\ 
+			\textbf{FROM} Projekt\\ 
+			\textbf{WHERE} Projektort \textbf{NOT IN} 'Dresden'
+			)\\
+			\textbf{WHERE} ProjektNr \textbf{IN} NoNr\\ \textbf{ORDER BY} PersonalNr)
+			)
+		\pagebreak	
+		\paragraph*{g}.\\
+			\textbf{SELECT} Ort\\ \textbf{FROM} (\\\textbf{SELECT} Wohnort \textbf{AS} Ort\\ \textbf{FROM} Angestellter) \\
+			\textbf{UNION} \\
+			\textbf{SELECT} Ort\\ \textbf{FROM} Abteilung\\
+			\textbf{UNION}\\
+			\textbf{SELECT} Ort\\ \textbf{FROM} (\\ \textbf{SELECT} Projektort AS Ort\\ \textbf{FROM} Projekt)\\
+			\textbf{ORDER BY} Ort;
+				
+		\paragraph*{h}.\\
 			
-	
+						
+			
+		
+		% TODO TOGETHER: i) & j) erläutern warum nicht das korrekte Ergebnis auusgegeben wird
+		\paragraph*{i}.\\
+			\textbf{SELECT} 
+			personalnr, angestellter.abteilungsnr, Abteilung.name\\
+			\textbf{FROM} 
+			Abteilung, angestellter\\ 
+			\textbf{WHERE} angestellter.AbteilungsNr = Abteilung.abteilungsnr
+			
+		\paragraph*{j.}.\\
+			\textbf{SELECT} 
+			Wohnort\\
+			\textbf{FROM}
+			\big(
+			\textbf{SELECT}  Wohnort, Count(*) AS Anzahl\\
+			\textbf{FROM}  Angestellter\\ 
+			\textbf{WHERE}  Wohnort IN ('Hamburg','Muenchen','Stuttgart')\\ 
+			\textbf{GROUP BY}  Wohnort
+			\big)\\ \textbf{WHERE} Anzahl > 1
+			
+			
+	\pagebreak
 	% Aufgabe 3.2 %
 	\section*{Aufgabe 3.2}
 		\paragraph*{a.}

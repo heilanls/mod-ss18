@@ -51,6 +51,20 @@
 		
 		% TODO YBL: e),f),g),h)
 		\paragraph*{e}.\\
+			\textbf{SELECT} angestellter.name, angestellter.vorname, gehalt \textbf{FROM}\\
+			(\\
+			
+			\textbf{SELECT} manager \textbf{AS} m, MAX(gehalt) \textbf{AS} rich\\
+			
+			\textbf{FROM} angestellter\\
+			
+			\textbf{GROUP BY} manager\\
+			
+			)\\
+			\textbf{INNER JOIN} angestellter ON angestellter.personalnr = m\\
+			\textbf{WHERE} gehalt > rich
+			
+			\pagebreak
 		
 		\paragraph*{f}.\\
 			\textbf{SELECT COUNT} (onlyindresden) \textbf{AS} MitarbeiterDieNurAnProjektenInDresdenArbeiten\\ \textbf{FROM} (\\
@@ -68,15 +82,14 @@
 			\textbf{WHERE} Projektort \textbf{NOT IN} 'Dresden'
 			)\\
 			\textbf{WHERE} ProjektNr \textbf{IN} NoNr\\ \textbf{ORDER BY} PersonalNr)
-			)
-		\pagebreak	
+			)	
+		
 		\paragraph*{g}.\\
-			\textbf{SELECT} Ort\\ \textbf{FROM} (\\\textbf{SELECT} Wohnort \textbf{AS} Ort\\ \textbf{FROM} Angestellter) \\
+			\textbf{SELECT DISTINCT} Ort\\ \textbf{FROM} (\\\textbf{SELECT} Wohnort \textbf{AS} Ort\\ \textbf{FROM} Angestellter) \\
 			\textbf{UNION} \\
 			\textbf{SELECT} Ort\\ \textbf{FROM} Abteilung\\
 			\textbf{UNION}\\
 			\textbf{SELECT} Ort\\ \textbf{FROM} (\\ \textbf{SELECT} Projektort AS Ort\\ \textbf{FROM} Projekt)\\
-			\textbf{ORDER BY} Ort;
 				
 		\paragraph*{h}.\\
 			
@@ -84,23 +97,17 @@
 			
 		
 		% TODO TOGETHER: i) & j) erläutern warum nicht das korrekte Ergebnis auusgegeben wird
-		\paragraph*{i}.\\
-			\textbf{SELECT} 
-			personalnr, angestellter.abteilungsnr, Abteilung.name\\
-			\textbf{FROM} 
-			Abteilung, angestellter\\ 
-			\textbf{WHERE} angestellter.AbteilungsNr = Abteilung.abteilungsnr
+		\paragraph*{i}angestellter.abteilungsnr geht nicht weil man nach einem \textbf{NATURAL JOIN} nicht wissen kann von welcher Tabelle die Abteilungsnummer kommt?\\
+			\textbf{SELECT} personalnr, abteilung.abteilungsnr, abteilung.name\\
+			\textbf{FROM} abteilung\\ 
+			\textbf{INNER JOIN} angestellter \textbf{ON} angestellter.abteilungsnr = abteilung.abteilungsnr
 			
-		\paragraph*{j.}.\\
-			\textbf{SELECT} 
-			Wohnort\\
-			\textbf{FROM}
-			\big(
-			\textbf{SELECT}  Wohnort, Count(*) AS Anzahl\\
-			\textbf{FROM}  Angestellter\\ 
-			\textbf{WHERE}  Wohnort IN ('Hamburg','Muenchen','Stuttgart')\\ 
-			\textbf{GROUP BY}  Wohnort
-			\big)\\ \textbf{WHERE} Anzahl > 1
+		\paragraph*{j.}Hier wurde der COUNT falsch verwendet und anstatt $Wohnort$ f"alschlicherweise $Ort$ benutzt.\\
+			\textbf{SELECT} Wohnort\\
+			\textbf{FROM} angestellter\\
+			\textbf{WHERE} Wohnort \textbf{IN} ('Hamburg','Muenchen','Stuttgart')\\
+			\textbf{GROUP BY} Wohnort\\
+			\textbf{HAVING COUNT}(Wohnort) $>$ 1\\
 			
 			
 	\pagebreak

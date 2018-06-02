@@ -41,4 +41,36 @@
 		\pagebreak
 	
 	\section*{Aufgabe 4.2}
+		% Gegeben ist die Datenbank aus Aufgabe 1, Einträge: s. Blatt. Zusätzlich wird folgender Trigger erstellt:
+		% CREATE TRIGGER T1
+			% AFTER INSERT ON darlehen
+			% REFERENCING NEW ROW AS r
+			% FOR EACH ROW
+			% UPDATE bankkonto
+			% SET b_guthaben=b_guthaben + r.d_kredithoehe
+			% WHERE b_inhaber=r.d_kunde;
+		% Geben Sie an, ob die Anweisung korrekt/nicht korrekt ist (mit Erklärung!)
+		
+		
+		
+	\section*{Aufgabe 4.3}
+		% Zeigen Sie mit Hilfe der Armstrong-Axiome, dass die abgeleiteten Regeln (union, decomposition, pseudotransitivity) ebenfalls gelten. Geben Sie für jeden Schritt an, welche Axiome Sie benutzt haben.
+		
+		
+	\section*{Aufgabe 4.4}
+		\paragraph*{CLOSURE($\{ F \}, Z\backslash\{F \longrightarrow G\}$})\\
+		result $=$ \{F\}\\
+		
+			\{F,C,D\} \hspace*{42mm} wegen $F \rightarrow CD$\\
+			
+			\{F,C,D,A\} \hspace*{39mm} wegen $D \rightarrow A$\\
+			
+			\{F,C,D,A,G,H\} \hspace*{32mm} wegen $AC \rightarrow GH$\\
+			
+			\hspace*{11mm}\textbf{\vdots}\\[1.2em]
+			$G \in CLOSURE(\{F\}, Z \backslash \{F \longrightarrow G\})$\\
+			$\Rightarrow F \rightarrow G$ ist redundante funktionale Abhängigkeit
+	
+	
+	
 \end{document}

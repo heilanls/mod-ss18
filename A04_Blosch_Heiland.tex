@@ -16,18 +16,31 @@
 	\section*{Aufgabe 4.1}
 		% relationale Algebra: Datum aller Darlehen über >5.000€
 		\paragraph*{a.}
-			TODO
+			$\pi_{Datum}(\rho_{(d\_kredithoehe>5.000)} darlehen)$
 			
 		% rel. Algebra: IDs aller Konten die ein Darl. über >20.000€ haben und KOntaktperson in Berlin
 		\paragraph*{b.}
-			TODO
+			% alle Mitarbeiter aus Berlin
+			$Q_1 \leftarrow \rho_{a\_ort = 'Berlin'}(mitarbeiter \underset{m\_adresse = a\_id}{\bowtie} adresse)$ \\[1.2em]
+			
+			% alle Konten mit Kontaktperson in Berlin
+			$Q_2 \leftarrow \pi_{b\_id}(bankkonto \underset{b\_kontaktperson = m\_id}{\bowtie} Q_1)$
+			\\[1.2em]
+			
+			% alle Darlehen mit kontaktperson in Berlin und > 20.000
+			$\pi_{d\_bankkonto}(\rho_{d\_kredithoehe > 20.000}(darlehen \underset{d\_bankkonto = b\_id}{\bowtie} Q_2))$\\
+			
 			
 		% SQL-query: Name,Alter,Anzahl Kredite,PLZ aller Kunden absteigend nach Alter sortiert
-		\paragraph*{c.}
-			TODO
+		\paragraph*{c}.\\
+			%%%
+			\textbf{SELECT} k\_name, k\_alter, k\_kredite, adresse.a\_plz as plz\\
+			\textbf{FROM} kunde, adresse\\
+			\textbf{WHERE} kunde.k\_adresse = adresse.a\_id\\
+			\textbf{SORT BY} k\_alter \textbf{DESCENDING}
 			
 		% Geben Sie eine Anfrage in SQL-Notation an, die für jeden Mitarbeiter den Namen und die Anzahl der Bankkonten, bei denen er als Kontaktperson fungiert und deren Guthaben niedriger als 5000 ist, ausgibt. Es sollen nur Mitarbeiter ausgegeben werden, die insgesamt bei weniger als 50 Bankkonten Kontaktpersonen sind.
-		\paragraph*{d.}
+		\paragraph*{d}.\\
 			TODO
 		
 		% SQL-query: Name,Alter aller Kunden, die mind. 1 Darl. haben, dessen Höhe > Durchschnittskredithöhe ist (ohne Duplikate -> DISTINCT)

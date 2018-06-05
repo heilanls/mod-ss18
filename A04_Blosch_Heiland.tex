@@ -55,6 +55,26 @@
 		
 	\section*{Aufgabe 4.3}
 		% Zeigen Sie mit Hilfe der Armstrong-Axiome, dass die abgeleiteten Regeln (union, decomposition, pseudotransitivity) ebenfalls gelten. Geben Sie für jeden Schritt an, welche Axiome Sie benutzt haben.
+		\paragraph*{union}:\\
+			$\alpha \rightarrow \beta$,	$\alpha \rightarrow \gamma$ \hspace*{25mm} (gegeben)\\
+			0. $\alpha \rightarrow \alpha \alpha$ \hspace*{31mm} (gilt)\\
+			1. $\alpha \alpha \rightarrow \alpha \beta$ \hspace*{29mm} (augmentation der ersten gegebenen)\\
+			2. $\alpha \beta \rightarrow \alpha \gamma$ \hspace*{29mm} (augmentation der zweiten gegebenen)\\
+			3. $\alpha \rightarrow \alpha \beta$ \hspace*{31mm} (transitivity von 0. und 1.)\\
+			4. $\alpha \rightarrow \beta \gamma$ \hspace*{31mm} (transitivity von 1. und 2.)
+			
+		\paragraph*{decomposition}:\\
+			1. $\alpha \rightarrow \beta \gamma$ \hspace*{31mm} (gegeben)\\
+			2. $\beta \gamma \rightarrow \beta$ \hspace*{31mm} (reflexivity, $\beta \subseteq \beta\gamma$)\\
+			3. $\alpha \rightarrow \beta$ \hspace*{33mm} (transitivity der oberen zwei Zeilen)\\
+			analog für $\alpha \rightarrow \gamma$
+		
+		\paragraph*{pseudotransitivity}:\\
+			$\alpha \rightarrow \beta, \beta\gamma \rightarrow \delta$ \hspace*{25mm} (gegeben)\\
+			1. $ \alpha\gamma \rightarrow \beta\gamma $ \hspace*{29mm} (augmentation der ersten gegebenen mit $\gamma$)
+			2. $\alpha \gamma \rightarrow \delta$ \hspace*{31mm} (transititvity der zweiten gegebenen und 1.)\\
+			
+			
 		
 		
 	\section*{Aufgabe 4.4}

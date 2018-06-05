@@ -36,20 +36,29 @@
 			%%%
 			\textbf{SELECT} k\_name, k\_alter, k\_kredite, adresse.a\_plz as plz\\
 			\textbf{FROM} kunde, adresse\\
-			\textbf{WHERE} kunde.k\_adresse = adresse.a\_id\\
-			\textbf{SORT BY} k\_alter \textbf{DESCENDING}
+			\textbf{WHERE} kunde.k\_adresse $ = $ adresse.a\_id\\
+			\textbf{ORDER BY} k\_alter \textbf{DESCENDING}
 			
 		% Geben Sie eine Anfrage in SQL-Notation an, die für jeden Mitarbeiter den Namen und die Anzahl der Bankkonten, bei denen er als Kontaktperson fungiert und deren Guthaben niedriger als 5000 ist, ausgibt. Es sollen nur Mitarbeiter ausgegeben werden, die insgesamt bei weniger als 50 Bankkonten Kontaktpersonen sind.
 		\paragraph*{d}.\\
-			TODO
+			\textbf{SELECT} m\_name, COUNT(*) \textbf{AS} anzahl\_konten\\
+			\textbf{FROM} mitarbeiter, bankkonto\\
+			\textbf{WHERE} mitarbeiter.m\_id $ = $ bankkonto.b\_kontaktperson\\
+			\textbf{GROUP BY} bankkonto.b\_kontaktperson\\
+			\textbf{HAVING COUNT}(*) $<$ 50
 		
-		% SQL-query: Name,Alter aller Kunden, die mind. 1 Darl. haben, dessen Höhe > Durchschnittskredithöhe ist (ohne Duplikate -> DISTINCT)
-		\paragraph*{e.}
-			TODO
+		% SQL-query: Name, Alter aller Kunden, die mind. 1 Darl. haben, dessen Höhe > Durchschnittskredithöhe ist (ohne Duplikate -> DISTINCT)
+		\paragraph*{e}.\\
+			\textbf{SELECT} k\_name, k\_alter\\
+			\textbf{FROM} kunde, darlehen\\
+			\textbf{WHERE} k\_id $ = $ d\_kunde\\
+			\textbf{AND} d\_kredithoehe > (\textbf{SELECT AVG}(d\_kredithoehe) \textbf{FROM} darlehen)
 		
 		% SQL: immer wenn in einer Adresse "Stuttgart" vorkommt, soll der Ort in "Stuttgart" geändert werden. z.B.: Stuttgart-Vaihingen -> Stuttgart, PenisStuttgart -> Stuttgart
-		\paragraph*{f.}
-			TODO
+		\paragraph*{f}.\\
+			\textbf{UPDATE} adresse\\
+			\textbf{SET} ort $ = $ 'Stuttgart'\\
+			\textbf{WHERE} ort \textbf{LIKE} '\%Stuttgart\%'\\
 	
 		\pagebreak
 	
@@ -63,7 +72,33 @@
 			% SET b_guthaben=b_guthaben + r.d_kredithoehe
 			% WHERE b_inhaber=r.d_kunde;
 		% Geben Sie an, ob die Anweisung korrekt/nicht korrekt ist (mit Erklärung!)
+		\paragraph*{a.}nicht zul"assig\\
+		Wegen Constraint/Fremdschl"ussel \textbf{k\_adresse\_fk} (die Tabelle $ adresse $ hat keine Zeile mit $a\_id = 103$)
 		
+		\paragraph*{b.}nicht zul"assig\\
+		Wegen Constraint/Prim"arschl"ussel \textbf{k\_kunde\_pk} (201 ist keine g"ultige ID mehr)
+		
+		\paragraph*{c.}zul"assig\\
+		Tupel (101,Nobelstraße,Stuttgart,70569) wird aus Tabelle $ adresse $ entfernt.\\
+		In der Tabelle $ mitarbeiter $ werden aufgrund des Fremdschl"ussels \textbf{m\_adresse\_fk} alle Eintr"age in der Spalte $ m\_adresse $, die 101 sind, zu \textbf{NULL} ge"andert.
+		
+		\paragraph*{d.}zul"assig\\
+		Tupel (504, 05.02.2017, 10000, 401, 201) wird in die Tabelle $ darlehen $ eingef"ugt.\\ Daraufhin wird der Trigger \textbf{T1} ausgel"ost, der in der Tabelle $ bankkonto $ das Konto mit der b\_id 401 ver"andert: b\_guthaben "andert sich zu 20000.
+		
+		\paragraph*{e.}zul"assig\\
+		Tupel (501, 03.02.2017, 5000, 401, 201) wird aus der Tabelle $ darlehen $ entfernt.
+		
+		\paragraph*{f.}zul"assig\\
+		Tupel (201, Klein, 0, 26, NULL) wird aus der Tabelle $ kunde $ entfernt.\\
+		Aufgrund des Constraints/Fremdschl"ussels \textbf{d\_kunde\_fk} werden alle Darlehen mit $ d\_kunde = 201 $ ebenfalls aus $ darlehen $ entfernt.
+		
+		\paragraph*{g.}nicht zul"assig\\
+		Wegen Constraint $ b\_kontaktperson\_fk $ in Tabelle $ bankkonto $ (Mitarbeiter wird nicht gel"oscht, da er noch in mindestens einem Konto als Kontaktperson eingetragen ist).
+		
+		\paragraph*{h.}zul"assig\\
+		Tupel (301, Groß, 35, 101) wird aus Tabelle $ mitarbeiter $ entfernt.
+		
+		\pagebreak
 		
 		
 	\section*{Aufgabe 4.3}
@@ -84,8 +119,8 @@
 		
 		\paragraph*{pseudotransitivity}:\\
 			$\alpha \rightarrow \beta, \beta\gamma \rightarrow \delta$ \hspace*{25mm} (gegeben)\\
-			1. $ \alpha\gamma \rightarrow \beta\gamma $ \hspace*{29mm} (augmentation der ersten gegebenen mit $\gamma$)
-			2. $\alpha \gamma \rightarrow \delta$ \hspace*{31mm} (transititvity der zweiten gegebenen und 1.)\\
+			1. $ \alpha\gamma \rightarrow \beta\gamma $ \hspace*{30mm} (augmentation der ersten gegebenen mit $\gamma$)\\
+			2. $\alpha \gamma \rightarrow \delta$ \hspace*{32mm} (transititvity der zweiten gegebenen und 1.)\\
 			
 			
 		

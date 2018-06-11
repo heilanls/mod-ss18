@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\input{usepackage.tex}
+
+\begin{document}
+	%%% Vorgegebenes Deckblatt %%%
+	\includepdf{deckblatt.pdf}
+	%%% format and header %%%
+	\input{formatAndHeader.tex}
+	
+	\section*{Aufgabe 5.1}
+		\paragraph*{a.} Ein Schl"usselkandidat $ \Gamma $ enth"alt alle Attribute, die auf keiner rechten Seite der funktionalen Abh"angigkeiten in $ \mathcal{X} $ stehen. Des weiteren muss f"ur alle Attribute $A \in \mathcal{R} $ gelten: $ A \in (\Gamma)^+ $; dar"uber hinaus muss $ \Gamma $ minimal sein, d.h. es darf keine andere Attributmenge geben, die die vorigen Anforderungen erf"ullt und weniger Elemente enth"alt als $ \Gamma $.\\\\[1.2em] 
+		%%%%%%%%%%%%%%%%% 1. CK %%%%%%%%%%%%%%%%
+		\textbf{1. Schl"usselkandidat: }$ \mathbf{DL }$\\
+		\begin{itemize}
+			\item L steht auf keiner rechten Seite, $ L \in DL $ \checkmark
+			\item $ (DL)^+: 0. \{D,L\} $\\
+			$ 1. \{D,L,E,G,H\} $ \hspace*{20mm}wegen $ DL \rightarrow EGH $\\
+			$ 2. \{D,L,E,G,H,J\} $ \hspace*{17mm}wegen $ E \rightarrow J $\\
+			$ 3. \{D,L,E,G,H,J,F,K\} $ \hspace*{9mm}wegen $ G \rightarrow FK $\\
+			$ \Rightarrow \mathcal{R} \in (DL)^+$ \checkmark
+			\item $ DL $ ist minimal (folgt aus Vorbemerkung) \checkmark
+		\end{itemize}
+		
+			
+\end{document}

@@ -39,6 +39,7 @@
 			\item $ LH $ ist minimal (folgt aus Vorbemerkung) \checkmark
 		\end{itemize}	
 	
+	
 	%%% b) DL -> EGH enthält L -> E
 	%%% DLEGH bleiben, FJK in neue Tabelle mit E als foreign key und neue Tabelle mit DLEF
 		\paragraph*{b.}\textbf{1. Schl"usselkandidat}\\
@@ -49,6 +50,7 @@
 		D, G,F, und K sind nur von H abhängig, also partiell vom candidate key. Schema in 2NF:\\
 		$ \mathcal{R}_1(D,F,G,\underline{H},K) $, $ \mathcal{R}_2(E,J,\underline{L}) $, $ \mathcal{R}_3(\underline{H},\underline{L}) $
 		
+		
 	%%% c) eigentlich kann man den 2. Teil von a) kopieren
 		\paragraph*{c.}$ CLOSURE(\{L,H\}, \mathcal{X}):$\\
 		$ 0. \{H,L\} $\\
@@ -58,6 +60,8 @@
 		$ 4. \{H,L,D,G,E,F,K,J\} $ \hspace*{9mm}wegen $ E \rightarrow J $\\
 		$ \Rightarrow F \in CLOSURE(\{L,H\}, \mathcal{X}) \rightarrow$ \checkmark
 	\pagebreak
+	
+	
 	%%% d) LH -> H, H -> DG, DG-> G, G-> FK, FK -> F
 		\paragraph*{d}.\\
 		1. $ LH \rightarrow H $ \hspace*{40mm}reflexivity ($ H \subseteq LH $)\\
@@ -79,6 +83,12 @@
 	$ \mathcal{R}_1(\underline{A,C}) $, $ \mathcal{R}_2(B,\underline{C}) $
 	
 	
+	
+	%%%%% 5.3
+	\section*{Aufgabe 5.3}
+	
+	
+	
 	%%%%% 5.4 a) BH
 	
 	\section*{Aufgabe 5.4}
@@ -90,8 +100,5 @@
 		\paragraph*{b.} D ist partiell abh"angig von BH, denn $ B \rightarrow D $ 
 		
 		
-		\paragraph*{c.}Es gibt eine transitive Abhängigkeit vom candidate key: $ DE \rightarrow A \rightarrow B $
-		
-		
-		\paragraph*{d.}$ \mathcal{S} $ ist nicht in 3NF, da es eine transitive Ab"angigkeit gibt: $ DE \rightarrow A \rightarrow B $
+		\paragraph*{c.}$ \mathcal{S} $ ist nicht in 3NF, da es eine transitive Ab"angigkeit gibt: $ DE \rightarrow A \rightarrow B $
 \end{document}

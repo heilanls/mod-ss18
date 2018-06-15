@@ -1,0 +1,66 @@
+
+	\begin{verbatim}
+		<?xml version="1.0" encoding="UTF-8"?>
+		  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		   <!-- Pruefungstyp -->
+		   <xs:complexType name="Pruefung">
+		
+		    <xs:sequence>
+		      <!-- Pruefungsnummer -->
+		      <xs:element name="Nummer" type="xs:nonNegativeInteger" />
+		
+		      <!-- Titel der Pruefung -->
+		      <xs:element name="Titel" type="xs:string" />
+		
+		      <!-- Art der Prüfung (schriftl./mündl.) -->
+		      <xs:element name="Art">
+		 
+		        <xs:simpleType>
+		         <xs:restriction base="xs:string">
+		           <xs:enumeration value="muendlich"/>
+		           <xs:enumeration value="schriftlich"/>
+		         </xs:restriction>
+		
+		        </xs:simpleType>
+		       </xs:element>
+		      </xs:sequence>
+		    </xs:complexType>
+		
+		
+		
+		    <!-- Studententyp -->
+		    <xs:complexType name="Student">
+		    
+		     <xs:sequence>
+		     
+		       <!-- Name des Studenten -->
+		       <xs:element name="Name" type="xs:string"/>
+		
+		       <xs:element name="Matrikelnr">
+		          <xs:simpleType>
+		            <xs:restriction base="xs:nonNegativeInteger">
+		              <xs:pattern value="\d{6}"></xs:pattern>
+		            </xs:restriction>
+		          </xs:simpleType>
+		       </xs:element>
+		       
+		       <!-- Adresse -->
+		       <xs:sequence>
+		          <xs:element name="Strasse" type="xs:string"/>
+		          <xs:element name="Hausnummer" type="xs:nonNegativeInteger"/>
+		          <xs:element name="PLZ" type="xs:nonNegativeInteger"/>
+		          <xs:element name="Stadt" type="xs:string"/>
+	     	   </xs:sequence>
+		    </xs:sequence>
+		   </xs:complexType>
+		
+		
+		
+		
+		   <!-- "teilnehmen"-Relation -->
+		   <xs:complexType name="teilnehmen">
+		    <!-- Student minOccurs=unbounded -->
+		    <!-- Pruefung minOccurs=1 maxOccurs=unbounded -->
+		  </xs:complexType>
+		</xs:schema>
+	\end{verbatim}

@@ -27,13 +27,15 @@
 	<!-- Studententyp -->
 	<xs:complexType name="Student">
 		<xs:sequence>
-			<!-- Name des Studenten -->
+		<!-- Name des Studenten -->
 			<xs:element name="Name" type="xs:string"/>
 			
 			<xs:element name="Matrikelnr">
 				<xs:simpleType>
 					<!-- TODO: 7-stellige Matrikelnummer -->
-					<xs:restriction base="xs:nonNegativeInteger"/>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:pattern value="\d{6}"></xs:pattern>
+					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
 			

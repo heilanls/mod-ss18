@@ -47,20 +47,43 @@
 		       <!-- Adresse -->
 		       <xs:sequence>
 		          <xs:element name="Strasse" type="xs:string"/>
+		       
 		          <xs:element name="Hausnummer" type="xs:nonNegativeInteger"/>
-		          <xs:element name="PLZ" type="xs:nonNegativeInteger"/>
+		       
+		          <xs:element name="PLZ">
+		            <xs:simpleType>
+		             <xs:restriction base="xs:nonNegativeInteger">
+		               <xs:pattern value="\d{5}"></xs:pattern>
+		             </xs:restriction>
+		            </xs:simpleType>
+		          </xs:element>
+		       
 		          <xs:element name="Stadt" type="xs:string"/>
-	     	   </xs:sequence>
+		       </xs:sequence>
 		    </xs:sequence>
 		   </xs:complexType>
 		
 		
 		
 		
-		   <!-- "teilnehmen"-Relation -->
-		   <xs:complexType name="teilnehmen">
-		    <!-- Student minOccurs=unbounded -->
-		    <!-- Pruefung minOccurs=1 maxOccurs=unbounded -->
-		  </xs:complexType>
+		   <xs:element name="teilnehmen">
+		      <xs:sequence minOccurs="1" maxOccurs="unbounded">
+		         <xs:element type="Student" minOccurs="1" maxOccurs="unbounded"/>
+		         <xs:element type="Pruefung" maxOccurs="unbounded"/>
+		      </xs:sequence>
+		   
+		      <!-- Matrikelnummer-Key m. reference -->
+		      <xs:key name="kMatrNr">
+		         <xs:selector xpath="./Student"/>
+		         <xs:field xpath="./Student/@Matrikelnr"></xs:field>
+		      </xs:key>
+		      
+		      <!-- Pruefungsnummer-Key m. reference -->
+		      <xs:key name="kPruefNr">
+		         <xs:selector xpath="./Pruefung"/>
+		         <xs:field xpath="./Pruefung/@Nummer"></xs:field>
+		      </xs:key>
+		   
+		   </xs:element>
 		</xs:schema>
 	\end{verbatim}

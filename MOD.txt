@@ -1,0 +1,82 @@
+Aufgabe 7.2
+	Klassen
+	- Hotelzimmer
+		- +Preis
+		- +buchen();
+		- +belegen();
+		- davon erben
+			- Einzelzimmer
+			- Doppelzimmer 		- Zuschlag bei Belegung durch mehrere Personen--\      
+			- Suite 			- Zuschlag bei Belegung durch mehrere Personen-- |--Muss vererbt werden schätze ich        
+			- Präsidentensuite 	- Zuschlag bei Belegung durch mehrere Personen--/          
+			
+	- Ausstattungstück
+		- isPristine: boolean
+	- Rechnung
+		- +begin
+		- +ende
+	- Posten
+		- davon erben 
+			- Basisposten
+			- Zusatzposten
+				- + typ: String
+			- Erstattungsposten
+	- Kunde
+		- +Name 
+		- +Kreditkarte
+	
+	Relationen
+	- Rechnung  1----------(1...n)  Posten
+	- Kunde  1-----------1  Hotelzimmer
+	- Hotelzimmer  1----------n,(1...n),???  Ausstattungstück
+	- Erstattungsposten  (0-1)----------1  Ausstattungstück
+	
+Aufgabe 7.3
+	Klassen
+	- Kunde 
+	- Vertrieb
+	- Lager
+	- Lieferant
+	- Logistik
+
+
+	Kunde 			Vertrieb  			  Lager 			Lieferant 				Logistik
+	 ||                                                                                       
+	 ||   Bestellung                                                                                     
+	 || ------------->  ||
+	 ||                 ||
+	 ||    |____________||_________________________________________________________________
+     ||    |            || 	 Vorrätig?                                                    |                                
+	 ||    |            || ---------------> ||                                            |	 
+	 ||    |            ||    Ja/Nein       ||                                            |          
+	 ||    |            || <--------------- ||                                            |                          
+	 ||    |      ______||__________________||______________________________              |                                        
+	 ||    |     | Ja   ||                  ||                              |             |            
+	 ||    |     |      ||                  ||                              |             |          
+	 ||    |     |      ||                  ||                              |             |          
+	 ||    |     |      ||                  ||                              |             |          
+	 ||    |     |      ||                  ||                              |             |          
+	 ||    |     |      ||                  ||                              |             |          
+	 ||    |     |------||--------------------------------------------------|             |          
+	 ||    |     | Nein ||   Bestellung     ||                              |             |           
+	 ||    |     |      || -----------------||---------------> ||           |             |          
+	 ||    |     |      ||                  ||   Lieferung     ||           |             |         
+	 ||    |     |      ||                  || <-------------- ||           |             |            
+	 ||    |     |      ||      Meldung     ||                 ||           |             |            
+	 ||    |     |      || <----------------||---------------- ||           |             |            
+	 ||    |     |      ||                  ||                              |             |            
+	 ||    |     |      ||                  ||                              |             |            
+	 ||    |     |______||__________________________________________________|             |
+	 ||    |            ||  Reservierung    ||                                            |
+	 ||    |            || ---------------> ||                                            |
+	 ||    |____________||________________________________________________________________|                                                   
+	 ||                 ||                    Lieferung veranlassen                               
+	 ||                 || ------------------------------------------------------------> ||	 
+	 ||                 ||                   Versandbestätigung                          ||
+	 ||   Versand-	    || <------------------------------------------------------------ ||
+	 || bestätigung     ||
+	 || <------------   ||                                                   
+	 ||                                    
+	 ||                                    
+	 ||                                    
+	 	 

@@ -2,99 +2,53 @@
 
 \input{usepackage.tex}
 
+
 \begin{document}
 	\includepdf[pages=-]{deckblatt.pdf}
 	
 	\input{formatAndHeader.tex}
 	
-	\section*{Aufgabe 1.1}
-		\paragraph*{a.} Falsch, denn die Kardinalität eines Kapitels ist 1 (eine "1" auf der Kante zwischen $Buch$ und $enthaelt$) $\Rightarrow$ Ein Kapitel kann nur in einem Buch enthalten sein.
+	\section*{Aufgabe 8.1}.
+		\begin{center}
+	
+			\begin{figure}
+				\includegraphics[width=0.4\linewidth]{exercise_8_1.png}
+				\caption{Aufgabe 1}
+				\label{fig:exercise_8_1.png}
+			\end{figure}
+		\end{center}
 		
-		\paragraph*{b.} Richtig. Eine Kardinalität von n bedeutet in Min/Max-Notation (0,*).
 		
-		\paragraph*{c.} Falsch, Kapitel können auf derselben Seite beginnen, das Attribut $Startseite$ ist nicht unique.
-		
-		\paragraph*{d.} Ja, dies ist sinnvoll, denn Kapitel können ohne Buch nicht existieren und lässt sich auch nur mit Hilfe von ihm klar identifizieren.
-		
-		\paragraph*{e.}Falsch, er kann in (0,*) Fächern Prüfungen abnehmen. Das schließen wir aus dem m.
-		
-		\paragraph*{f.}Falsch es wird dafür keine Spezifikation angegeben.
-		
-		\paragraph*{g.}Richtig, ein Dozent kann einen Studenten mehrfach prüfen, denn die Kardinalität ist m. 
-		
-		\paragraph*{h.}Falsch, das Attribut "Datum" ist nicht unique.
-		
-		\paragraph*{i.}Es sind Kurse mit drei Teilnehmern aber nicht beliebig vielen möglich. Es gilt minimal ein Teilnehmer, maximal 5.
-		
-		\paragraph*{j.}Falsch, sie können 10 oder mehr Kurse besuchen.
-		
-		\paragraph*{k.}Falsch, sie müssen mindestens 10 besuchen.
-		
-		\paragraph*{l.}Falsch, sie muss immer angegeben werden.
-		%%%%%%%%%%%%%%%%%%%%% TODO: Aufgabenteile d) - l) %%%%%%%%%%%%%%%%%%%%%%%%%
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\newpage	
-	\section*{Aufgabe 1.2}
-		%%% Aufgabenteil a (LHE)
-		\subsection*{a.}
-		.
-			\begin{figure}[h]
-				\includegraphics[width=0.7\textwidth]{aufgabe_1_2_a.png}
+	\section*{Aufgabe 8.2}
+	\begin{table}[]
+		\begin{tabular}{|l|l|lll}
+			\cline{1-2}
+			Meta-Meta Modell & Backus-Naur Form                &  &  &  \\ \cline{1-2}
+			Meta-Modell      & Java Grammatik in BNF           &  &  &  \\ \cline{1-2}
+			Modell           & Java Klasse, Programm Code      &  &  &  \\ \cline{1-2}
+			Daten            & Programmausführung, Java Objekt &  &  &  \\ \cline{1-2}
+		\end{tabular}
+	\end{table}
+	
+	
+	\newpage	
+	\section*{Aufgabe 8.3}
+		\subsection*{a)}
+			\begin{figure}
+				\includegraphics[width=\linewidth]{exercise_8_3_a.png}
+%				\caption{Aufgabe 3 a)}
+				\label{fig:exercise_8_3_a.png}
 			\end{figure}
 		
-		%%% Aufgabenteil b (YBL)
-		\subsection*{b.}
-		. 
-			\begin{figure}[h]
-				\includegraphics[width=0.7\textwidth]{aufgabe_1_2_b.png}
-			\end{figure}
 		
-		%%% Aufgabenteil c (LHE)
-		\subsection*{c.}
-		.
-			\begin{figure}[h]
-				\includegraphics[width=0.7\textwidth]{aufgabe_1_2_c.png}
-			\end{figure}
-			
 		
 		\newpage
-		%%% Aufgabenteil d (YBL)
-		\subsection*{d.}
-		.
-			\begin{figure}[h]
-					\includegraphics[width=0.7\textwidth]{aufgabe_1_2_d.png}
-				\end{figure}
-		
-		%%% Aufgabenteil e (LHE)
-		\subsection*{e.}
-		.
-			\begin{figure}[h]
-				\includegraphics[width=0.7\textwidth]{aufgabe_1_2_e.png}
+		\subsection*{b)}
+			\begin{figure}
+				\includegraphics[width=\linewidth]{exercise_8_3_b.png}
+				\caption{Aufgabe 3 b)}
+				\label{fig:exercise_8_3_b.png}
 			\end{figure}
-		
-		%%% Aufgabenteil f (YBL)
-		\subsection*{f.}
-		.
-				\begin{figure}[h]
-					\includegraphics[width=0.7\textwidth]{aufgabe_1_2_f.png}
-	 			\end{figure}
-		
-		
-		%%% layout reasons
-		\pagebreak
-		
-		%%% Aufgabenteil g (LHE)
-		\subsection*{g.}
-		.
-			\begin{figure}[h]
-				\includegraphics[width=0.7\textwidth]{aufgabe_1_2_g.png}
-			\end{figure}
-		
-		%%% Aufgabenteil h (YBL)
-		\subsection*{h.}
-		.
-				\begin{figure}[h]
-					\includegraphics[width=0.7\textwidth]{aufgabe_1_2_h.png}
-				\end{figure}
 		
 \end{document}
